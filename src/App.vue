@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class="bgBox" v-motion :initial="{ opacity: 0, y: 25 }" :enter="{ opacity: 1, y: 0 }" :duration="1000">
-      <img src="https://i.p-i.vip/43/20240915-66e6e5abe3e97.webp" alt="">
+      <img src="https://res.cloudinary.com/xiaohan/image/upload/v1731069492/bg_fhynp5.webp" alt="">
     </div>
 
     <div class="bgGrid">
@@ -16,12 +16,12 @@
     <div class="main" v-motion :initial="{ opacity: 0 }" :enter="{ opacity: 1 }" :duration="1000">
       <div class="info">
         <div class="header">
-          <img src="https://i.p-i.vip/43/20240913-66e403f2331ec.webp" alt="">
+          <img src="https://f003.backblazeb2.com/file/blog-v3/120887894_p1.jpg" alt="">
         </div>
 
         <div class="infoText">
-          <h1>Hi,</h1>
-          <h1>I'm <span class="qn">鹊楠</span></h1>
+          <h1>HI~</h1>
+          <h1>这里是<span class="qn">晓寒</span></h1>
         </div>
       </div>
 
@@ -55,7 +55,7 @@
     </div>
 
     <div class="footer">
-      By Quenan | ©2024
+      By XIAOHAN-KAKA | ©2024
     </div>
 
     <vs-dialog overlay-blur width="550px" not-center v-model="active">
@@ -81,13 +81,7 @@
               <template #content>{{ i.content }}</template>
             </vs-tooltip>
 
-            <vs-tooltip placement="top">
-              <vs-avatar color="#FF6D1A">
-                初
-              </vs-avatar>
 
-              <template #content>初七云cdn</template>
-            </vs-tooltip>
 
           </vs-avatar-group>
         </vs-alert>
@@ -101,9 +95,14 @@
             <b><a href="https://www.liushen.fun/" target="_blank">清羽飞扬</a></b>
             等主页，感谢他们awa
           </p>
-          <p>项目已经开源：</p>
+          <p>基于鹊澜的个人主页二次开发</p>
+          <p>原项目：</p>
           <p><a href="https://github.com/QNquenan/homepage-for-vue3"
               target="_blank">https://github.com/QNquenan/homepage-for-vue3</a>
+          </p>
+          <p>魔改后项目：</p>
+          <p><a href="https://github.com/Dreamkaka/homepage-for-vue3"
+              target="_blank">https://github.com/Dreamkaka/homepage-for-vue3</a>
           </p>
         </vs-alert>
       </div>
@@ -154,40 +153,44 @@ export default {
       aboutHidden: true,
       typingTexts: [
         "你好鸭，欢迎来到我的主页！",
-        "彼方尚有荣光在，世界不止眼前的苟且，还有诗和远方",
-        "累了可以在我这里歇歇脚嗷",
-        "May you happy every day",
+        "醉后不知天在水，满船清梦压星河",
+        "用代码表达言语的魅力，用代码书写山河的壮丽",
+        "如何得与凉风约，不共尘沙一并来！",
+        "我也晓得过苦楚，却无人渡我回家",
+        "你驻足于春色中，于那独一无二的春色之中",
+        "迟日江山丽，春风花草香",
+        "要超越过去与悲伤，用坚强和笑容去开拓明天",
       ],
       btnList: [
         {
           icon: 'icon-wodeboke',
           animate: '博客',
           color: '#fe8599',
-          href: 'https://blog.quenan.love'
+          href: 'https://blog.xiaohan-kaka.me'
         },
         {
           icon: 'icon-github',
           animate: 'Github',
           color: '#3d3d3d',
-          href: 'https://github.com/QNquenan'
+          href: 'https://github.com/Dreamkaka'
         },
         {
           icon: 'icon-bilibili',
           animate: 'BiliBili',
           color: '#0BA6D8',
-          href: 'https://space.bilibili.com/495882959'
+          href: 'https://space.bilibili.com/516951032'
         },
         {
           icon: 'icon-youjian1',
           animate: 'E-mail',
           color: '#FACB1E',
-          href: 'mailto:qn2987271942@outlook.com'
+          href: 'mailto:457970652@qq.com'
         },
         {
           icon: 'icon-wangyiyunyinle1',
           animate: '网易云',
           color: '#D81E06',
-          href: 'https://music.163.com/#/playlist?id=2696501847&creatorId=1785635020'
+          href: 'https://music.163.com/user/home?id=8326969493'
         },
       ],
       avaters: [
@@ -222,8 +225,8 @@ export default {
           content: 'Github'
         }
       ],
-      upTime: '2024-09-16',
-      version: 'beta3',
+      upTime: '2024-11-08',
+      version: '1.0.0',
       gridRows: 9,
       gridCols: 5,
       active: false,
