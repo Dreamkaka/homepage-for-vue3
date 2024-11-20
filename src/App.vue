@@ -20,6 +20,10 @@
         </div>
 
         <div class="infoText">
+          <div class="clock">
+            <span class="time">{{ currentTime }}</span>
+            <span class="date">{{ currentDate }}</span>
+          </div>
           <h1>HI~</h1>
           <h1>这里是<span class="qn">晓寒</span></h1>
         </div>
@@ -231,7 +235,10 @@ export default {
       gridCols: 5,
       active: false,
       isDarkMode: true,
-      theme: 'system' // 默认是亮色模式
+      theme: 'system', // 默认是亮色模式
+      currentTime: '',
+      currentDate: '',
+      timer: null
     }
   },
   mounted() {
@@ -243,6 +250,13 @@ export default {
     }
     // 监听系统主题变化
     window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', this.applyTheme);
+    this.updateTime()
+    this.timer = setInterval(this.updateTime, 1000)
+  },
+  beforeUnmount() {
+    if (this.timer) {
+      clearInterval(this.timer)
+    }
   },
   methods: {
     setTheme(mode) {
@@ -263,6 +277,20 @@ export default {
         title: '当前的版本',
         color: '#FE8599',
         content: `现在是 ${this.upTime} 更新的 ${this.version}`
+      })
+    },
+    updateTime() {
+      const now = new Date()
+      this.currentTime = now.toLocaleTimeString('zh-CN', { 
+        hour: '2-digit', 
+        minute: '2-digit',
+        second: '2-digit'
+      })
+      this.currentDate = now.toLocaleDateString('zh-CN', {
+        year: 'numeric',
+        month: 'long',
+        day: 'numeric',
+        weekday: 'long'
       })
     }
   }
